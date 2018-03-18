@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using ComponentCouplingMetric.Core.Metrics;
 
-namespace ComponentCouplingMetric.Core.Metrics
+namespace ComponentCouplingMetric
 {
-    public class ComponentStability
+    public class ComponentStabilityMetric : IComponentMetric<double>
     {
-        public ComponentStability(int incomingDependencies, int outgoingDepencendies)
+        public ComponentStabilityMetric(int incomingDependencies, int outgoingDepencendies)
         {
             if (incomingDependencies < 0)
             {
@@ -25,7 +24,7 @@ namespace ComponentCouplingMetric.Core.Metrics
         public int IncomingDependencies { get; private set; }
         public int OutgoingDepencendies { get; private set; }
 
-        public double GetInstability()
+        public double CaculateMetric()
         {
             var result = (double)OutgoingDepencendies / ((double)IncomingDependencies + OutgoingDepencendies);
 

@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Calculations\" />
-    <Folder Include="ComponentDiscovery\" />
   </ItemGroup>
 
 </Project>
