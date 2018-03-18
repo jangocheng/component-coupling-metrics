@@ -5,4 +5,5 @@
 // a specific target and scoped to a namespace, type, member, etc.
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1481:Unused local variables should be removed", Justification = "<Pending>", Scope = "member", Target = "~M:ComponentCouplingMetric.Test.ComponentStabilityTest.ComponentStatiblity_IncomingAndOutgoingShouldBeGreaterThanZero")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1481:Unused local variables should be removed", Justification = "<Pending>", Scope = "member", Target = "~M:ComponentCouplingMetric.Test.ComponentAbstractionMetricTest.ComponentAbstractionMetric_PropertiesShouldBeGreaterThanZero")]
 

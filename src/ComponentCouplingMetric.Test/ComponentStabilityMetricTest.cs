@@ -46,7 +46,7 @@ namespace ComponentCouplingMetric.Test
         [InlineData(3, 2, 0.4)]
         [InlineData(10, 20, 0.67)]
         [InlineData(555, 666, 0.55)]
-        public void ComponentStabilityMetric_InstabilityShouldHaveCorrectValues(int incoming, int outgoing, double instability)
+        public void ComponentStabilityMetric_CalculateMetricShouldReturnCorrectValues(int incoming, int outgoing, double instability)
         {
             // Arrange
             ComponentStabilityMetric stability = new ComponentStabilityMetric(incoming, outgoing);
@@ -63,7 +63,7 @@ namespace ComponentCouplingMetric.Test
         [InlineData(3, 2)]
         [InlineData(20, 30)]
         [InlineData(30, 20)]
-        public void ComponentStabilityMetric_CheckInstabilityValueGreaterThanZeroLessThanOne(int incoming, int outgoing)
+        public void ComponentStabilityMetric_CheckInstabilityValueIsGreaterThanZeroLessThanOne(int incoming, int outgoing)
         {
             // Arrange
             ComponentStabilityMetric stability = new ComponentStabilityMetric(incoming, outgoing);

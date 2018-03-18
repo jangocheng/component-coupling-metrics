@@ -17,6 +17,11 @@ namespace ComponentCouplingMetric
                 throw new ArgumentOutOfRangeException(nameof(outgoingDepencendies), outgoingDepencendies, nameof(outgoingDepencendies));
             }
 
+            if (outgoingDepencendies == 0 && incomingDependencies == 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(outgoingDepencendies) + nameof(incomingDependencies), outgoingDepencendies, message: "Both parameter are 0");
+            }
+
             IncomingDependencies = incomingDependencies;
             OutgoingDepencendies = outgoingDepencendies;
         }
